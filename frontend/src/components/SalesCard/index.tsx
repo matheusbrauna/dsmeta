@@ -1,5 +1,8 @@
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { AvatarIcon } from "../AvatarIcon";
 import styles from "./styles.module.css"
+
 
 export function SalesCard() {
   return (
@@ -7,10 +10,20 @@ export function SalesCard() {
       <h2 className={styles.dsmetaSalesTitle}>Vendas</h2>
       <div>
         <div className={styles.dsmetaFormControlContainer}>
-          <input className={styles.dsmetaFormControl} type="text" />
+          <DatePicker
+            selected={new Date()}
+            onChange={(date: Date) => { }}
+            className={styles.dsmetaFormControl}
+            dateFormat="dd/MM/yyyy"
+          />
         </div>
         <div className={styles.dsmetaFormControlContainer}>
-          <input className={styles.dsmetaFormControl} type="text" />
+          <DatePicker
+            selected={new Date()}
+            onChange={(date: Date) => { }}
+            className={styles.dsmetaFormControl}
+            dateFormat="dd/MM/yyyy"
+          />
         </div>
       </div>
 
