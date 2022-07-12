@@ -1,4 +1,4 @@
-export function Logo() {
+export function AvatarIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -1,11 +1,9 @@
-import { Logo } from "./components/Logo";
+import { AvatarIcon } from "./components/AvatarIcon";
+import { Layout } from "./Layout";
 import "./styles/global.css"
 
 export function App() {
   return (
-    <>
-      <h1>Hello World!</h1>
-      <Logo />
-    </>
+    <Layout />
   )
 }
