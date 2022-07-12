@@ -1,28 +1,36 @@
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import { AvatarIcon } from "../AvatarIcon";
-import styles from "./styles.module.css"
-
+import { useState } from 'react'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
+import { AvatarIcon } from '../AvatarIcon'
+import styles from './styles.module.css'
 
 export function SalesCard() {
+  const minDateFormatted = new Date(
+    new Date().setDate(new Date().getDate() - 365),
+  )
+  const maxDateFormatted = new Date()
+
+  const [minDate, setMinDate] = useState(minDateFormatted)
+  const [maxDate, setMaxDate] = useState(maxDateFormatted)
+
   return (
     <div className={styles.dsmetaCard}>
       <h2 className={styles.dsmetaSalesTitle}>Vendas</h2>
       <div>
         <div className={styles.dsmetaFormControlContainer}>
           <DatePicker
-            selected={new Date()}
-            onChange={(date: Date) => { }}
+            selected={minDate}
+            onChange={(date: Date) => setMinDate(date)}
             className={styles.dsmetaFormControl}
-            dateFormat="dd/MM/yyyy"
+            dateFormat='dd/MM/yyyy'
           />
         </div>
         <div className={styles.dsmetaFormControlContainer}>
           <DatePicker
-            selected={new Date()}
-            onChange={(date: Date) => { }}
+            selected={maxDate}
+            onChange={(date: Date) => setMaxDate(date)}
             className={styles.dsmetaFormControl}
-            dateFormat="dd/MM/yyyy"
+            dateFormat='dd/MM/yyyy'
           />
         </div>
       </div>
@@ -49,8 +57,8 @@ export function SalesCard() {
               <td className={styles.show992}>11</td>
               <td>R$ 55300.00</td>
               <td>
-                <div className="dsmeta-red-btn-container">
-                  <div className="dsmeta-red-btn">
+                <div className='dsmeta-red-btn-container'>
+                  <div className='dsmeta-red-btn'>
                     <AvatarIcon />
                   </div>
                 </div>
@@ -64,8 +72,8 @@ export function SalesCard() {
               <td className={styles.show992}>11</td>
               <td>R$ 55300.00</td>
               <td>
-                <div className="dsmeta-red-btn-container">
-                  <div className="dsmeta-red-btn">
+                <div className='dsmeta-red-btn-container'>
+                  <div className='dsmeta-red-btn'>
                     <AvatarIcon />
                   </div>
                 </div>
@@ -79,8 +87,8 @@ export function SalesCard() {
               <td className={styles.show992}>11</td>
               <td>R$ 55300.00</td>
               <td>
-                <div className="dsmeta-red-btn-container">
-                  <div className="dsmeta-red-btn">
+                <div className='dsmeta-red-btn-container'>
+                  <div className='dsmeta-red-btn'>
                     <AvatarIcon />
                   </div>
                 </div>

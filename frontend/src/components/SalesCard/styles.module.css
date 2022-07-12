@@ -51,7 +51,7 @@
   border-top: 1px solid #5f6e82;
 }
 
-.dsmetaSalesTable tbody tr:hover>td {
+.dsmetaSalesTable tbody tr:hover > td {
   background-color: #384459;
 }
 

@@ -1,6 +1,6 @@
-import { Header } from "../components/Header";
-import { SalesCard } from "../components/SalesCard";
-import styles from "./styles.module.css"
+import { Header } from '../components/Header'
+import { SalesCard } from '../components/SalesCard'
+import styles from './styles.module.css'
 
 export function Layout() {
   return (
