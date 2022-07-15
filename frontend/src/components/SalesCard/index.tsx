@@ -18,8 +18,13 @@ export function SalesCard() {
   const [sales, setSales] = useState<Sale[]>([]);
 
   useEffect(() => {
-    api.get('/sales').then(({ data }) => setSales(data.content));
-  }, []);
+    const maxDateISO = maxDate.toISOString().slice(0, 10);
+    const minDateISO = minDate.toISOString().slice(0, 10);
+
+    api
+      .get(`/sales/?minDate=${minDateISO}&maxDate=${maxDateISO}`)
+      .then(({ data }) => setSales(data.content));
+  }, [minDate, maxDate]);
 
   return (
     <div className={styles.dsmetaCard}>
