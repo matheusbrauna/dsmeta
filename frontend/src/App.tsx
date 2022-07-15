@@ -1,6 +1,6 @@
-import { Layout } from './Layout'
-import './styles/global.css'
+import { Layout } from './Layout';
+import './styles/global.css';
 
 export function App() {
-  return <Layout />
+  return <Layout />;
 }
