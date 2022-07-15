@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import { api } from '../../services/api';
 
 import styles from './styles.module.css';
@@ -10,7 +11,8 @@ export function NotifyButton({ saleId }: NotifyButtonProps) {
   function handleNotifySms(id: number) {
     api
       .get(`/sales/${id}/notification`)
-      .then((response) => console.log('Deu certo'));
+      .then(() => toast.info('SMS enviado com sucesso!'))
+      .catch(() => toast.error('Não foi possível enviar o SMS'));
   }
 
   return (
