@@ -1,11 +1,27 @@
-export function AvatarIcon() {
+import { api } from '../../services/api';
+
+import styles from './styles.module.css';
+
+interface NotifyButtonProps {
+  saleId: number;
+}
+
+export function NotifyButton({ saleId }: NotifyButtonProps) {
+  function handleNotifySms(id: number) {
+    api
+      .get(`/sales/${id}/notification`)
+      .then((response) => console.log('Deu certo'));
+  }
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="45"
       height="45"
       fill="none"
-      viewBox="0 0 45 45">
+      viewBox="0 0 45 45"
+      onClick={() => handleNotifySms(saleId)}
+      className={styles.notificationButton}>
       <rect
         width="44"
         height="44"

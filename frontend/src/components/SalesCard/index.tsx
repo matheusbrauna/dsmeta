@@ -4,7 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Sale } from '../../models/sale';
 import { api } from '../../services/api';
-import { AvatarIcon } from '../AvatarIcon';
+import { NotifyButton } from '../NotifyButton';
 import styles from './styles.module.css';
 
 export function SalesCard() {
@@ -80,7 +80,7 @@ export function SalesCard() {
                 <td>
                   <div className="dsmeta-red-btn-container">
                     <div className="dsmeta-red-btn">
-                      <AvatarIcon />
+                      <NotifyButton saleId={sale.id} />
                     </div>
                   </div>
                 </td>

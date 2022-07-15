@@ -1,0 +1,12 @@
+.notificationButton {
+  transition: scale, filter 0.2s;
+}
+
+.notificationButton:hover {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
+
+.notificationButton:active {
+  transform: scale(1.03);
+}
